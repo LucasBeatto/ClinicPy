@@ -59,6 +59,11 @@ class Medico(Base):
         back_populates="medico"
     )
 
+    consultas: Mapped[list["Consulta"]] = relationship(
+        "Consulta",
+        back_populates="medico"
+    )
+
     def __repr__(self):
         return (
             f"Medico("

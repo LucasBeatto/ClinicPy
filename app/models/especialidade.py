@@ -25,6 +25,11 @@ class Especialidade(Base):
         back_populates="especialidades"
     )
 
+    consultas: Mapped[list["Consulta"]] = relationship(
+        "Consulta",
+        back_populates="especialidade"
+    )
+
     def __repr__(self):
         return (
             f"Especialidade("
