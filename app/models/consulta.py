@@ -62,6 +62,7 @@ class Consulta(Base):
         Enum(
             "pendente",
             "confirmada",
+            "recusada",
             "cancelada",
             "em_andamento",
             "finalizada",
